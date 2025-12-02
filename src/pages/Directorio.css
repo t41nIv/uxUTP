@@ -1,0 +1,335 @@
+/* CONTENEDOR GENERAL */
+.directorio {
+  min-height: 100vh;
+  background: #f3f6f8;
+  color: #102a43;
+  display: flex;
+  flex-direction: column;
+}
+
+.directorio-main {
+  padding-bottom: 4rem;
+}
+
+/* CONTENEDOR CENTRAL */
+.directorio-shell {
+  width: min(1120px, 100% - 2.5rem);
+  margin: 0 auto;
+}
+
+/* HERO */
+.directorio-hero {
+  padding: 4.5rem 0 3rem;
+  background: radial-gradient(circle at top left, #36c26b 0, #0b7c47 40%, #064024 100%);
+  color: #ffffff;
+}
+
+.directorio-hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.directorio-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+}
+
+.directorio-title {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.directorio-subtitle {
+  font-size: 0.98rem;
+  max-width: 34rem;
+  opacity: 0.95;
+}
+
+/* BUSCADOR */
+.directorio-search {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.directorio-search-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  border-radius: 999px;
+  border: none;
+  padding: 0.75rem 1.1rem;
+  font-size: 0.95rem;
+  outline: none;
+  background: #ffffff;
+  color: #102a43;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+.directorio-search-input::placeholder {
+  color: rgba(16, 42, 67, 0.6);
+}
+
+.directorio-search-btn {
+  border-radius: 999px;
+  border: none;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #0b7c47;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+}
+
+.directorio-search-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26);
+  background: #e8fff3;
+}
+
+/* TAGS / CHIPS */
+.directorio-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.directorio-tag-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.9;
+}
+
+.directorio-tag {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  background: rgba(6, 66, 40, 0.5);
+  color: #ffffff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.directorio-tag:hover {
+  background: rgba(6, 66, 40, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+/* LISTA DEL DIRECTORIO */
+.directorio-list {
+  margin-top: 2.5rem;
+}
+
+.directorio-section {
+  margin-bottom: 2.5rem;
+}
+
+.directorio-section-header {
+  margin-bottom: 0.9rem;
+}
+
+.directorio-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0b7c47;
+}
+
+.directorio-section-subtitle {
+  font-size: 0.9rem;
+  color: #5a7184;
+}
+
+/* GRID DE TARJETAS */
+.directorio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.directorio-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #dde3ea;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 8px 24px rgba(15, 35, 52, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* CABECERA CON AVATAR */
+.directorio-card-header {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.directorio-card-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #0b7c47;
+  box-shadow: 0 6px 16px rgba(11, 124, 71, 0.25);
+  background: #e3f7ec;
+}
+
+.directorio-card-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.directorio-card-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #102a43;
+}
+
+.directorio-card-role {
+  font-size: 0.9rem;
+  color: #5a7184;
+}
+
+/* DATOS DE CONTACTO EN TARJETA */
+.directorio-card-data {
+  list-style: none;
+  padding: 0;
+  margin: 0.2rem 0 0;
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.88rem;
+}
+
+.directorio-card-data li {
+  display: flex;
+  gap: 0.4rem;
+  align-items: baseline;
+}
+
+.directorio-data-label {
+  font-weight: 600;
+  color: #52606d;
+  min-width: 4rem;
+}
+
+.directorio-data-value {
+  color: #102a43;
+}
+
+.directorio-link {
+  text-decoration: none;
+  color: #0b7c47;
+  font-weight: 500;
+}
+
+.directorio-link:hover {
+  text-decoration: underline;
+}
+
+/* MENSAJE DE VACÍO */
+.directorio-empty {
+  font-size: 0.95rem;
+  color: #52606d;
+  background: #ffffff;
+  border-radius: 0.9rem;
+  border: 1px dashed #cbd2e1;
+  padding: 1rem 1.25rem;
+}
+
+/* SECCIÓN DE AYUDA */
+.directorio-help {
+  margin-top: 1.5rem;
+  border-top: 1px solid #dde3ea;
+  padding-top: 1.75rem;
+}
+
+.directorio-help-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, #e8fff3, #ffffff);
+  border-radius: 1.1rem;
+  border: 1px solid #c0e8d4;
+  padding: 1.2rem 1.4rem;
+}
+
+.directorio-help-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0b7c47;
+}
+
+.directorio-help-text {
+  font-size: 0.9rem;
+  color: #52606d;
+  max-width: 28rem;
+}
+
+.directorio-help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  background: #0b7c47;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 10px 28px rgba(11, 124, 71, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.directorio-help-btn:hover {
+  background: #086537;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(11, 124, 71, 0.45);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .directorio-hero {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .directorio-help-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .directorio-search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .directorio-search-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
