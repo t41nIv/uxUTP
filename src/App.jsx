@@ -4,6 +4,7 @@ import Portada from "./pages/Portada.jsx";
 import Inicio from "./pages/Inicio.jsx";
 import Directorio from "./pages/Directorio.jsx";
 import Oferta from "./pages/Oferta.jsx";
+
 const App = () => {
   return (
     <Routes>
@@ -11,7 +12,6 @@ const App = () => {
       <Route path="/inicio" element={<Inicio />} />
       <Route path="/directorio" element={<Directorio />} />
       <Route path="/oferta" element={<Oferta />} />
-
     </Routes>
   );
 };
